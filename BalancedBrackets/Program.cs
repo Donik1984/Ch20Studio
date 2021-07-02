@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BalancedBracketsNS
+namespace BalancedBracketsNSPR
 {
     class Program
     {

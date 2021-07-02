@@ -4,6 +4,7 @@ namespace BalancedBracketsNS
 {
     public class BalancedBrackets
     {
+
         /**
          * The function BalancedBrackets should return true if and only if
          * the input string has a set of "balanced" brackets.
@@ -26,18 +27,51 @@ namespace BalancedBracketsNS
         public static bool HasBalancedBrackets(String str)
         {
             int brackets = 0;
-            foreach (char ch in str.ToCharArray())
+            //foreach (char ch in str.ToCharArray())
+            //{
+            //    if (ch == '[')
+            //    {
+            //        brackets++;
+            //    }
+            //    else if (ch == ']')
+            //    {
+            //        brackets--;
+            //    }
+            //}
+            //return brackets == 0;
+
+            char[] strChar;
+            strChar = str.ToCharArray();
+            for (int i = 0; i <= strChar.Length; i++)
             {
-                if (ch == '[')
-                {
-                    brackets++;
-                }
-                else if (ch == ']')
+                if (strChar[i] == ']')
                 {
                     brackets--;
+                    break;
                 }
+                else
+                foreach (char ch in strChar)
+                    {
+                        if (ch == '[')
+                        {
+                            brackets++;
+                        }
+                        else if (ch == ']')
+                        {
+                            brackets--;
+                        }
+                    }
             }
             return brackets == 0;
+        }
+
+        public double JetSpeed(double distance, double hours)
+        {
+            double speed;
+
+            speed = distance / hours;
+
+            return speed;
         }
     }
 }
